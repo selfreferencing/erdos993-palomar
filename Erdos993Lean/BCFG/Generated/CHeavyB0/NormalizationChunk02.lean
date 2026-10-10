@@ -1,0 +1,77 @@
+module
+
+public import Erdos993Lean.BCFG.Generated.CHeavyB0.IntegerInputs
+public import Erdos993Lean.BCFG.Generated.CHeavyB0.IntegerBasis
+public import Erdos993Lean.F4Fast.IntegerNormalization
+public import Erdos993Lean.F4Fast.RangeAll
+
+/-! Integer output checks for rows 10 through 14; the unchanged original predicates follow through exact adapters. -/
+
+@[expose] public section
+
+set_option autoImplicit false
+
+namespace Erdos993Lean.BCFG.CertData.CHeavyB0
+
+theorem integer_normalization_checks02 :
+    (List.range 5).all (fun j =>
+      decide (certificateDenInt.getD (10+j) 0 ≠ 0) &&
+      (List.range (M+1)).all (fun k =>
+        decide ((certificateSourceDenInt.getD (10+j) []).getD k 0 ≠ 0) &&
+        decide ((certificateSourceNumInt.getD (10+j) []).getD k 0 *
+          certificateDenInt.getD (10+j) 0 =
+          (certificateInt.getD (10+j) []).getD k 0 *
+          (certificateSourceDenInt.getD (10+j) []).getD k 0)) &&
+      IUni.checkEq
+        (IUni.scale (certificateDenInt.getD (10+j) 0)
+          (IUni.cachedNormalizedRow N compositionInt outerInt (10+j)))
+        (IUni.scale (compositionDenInt * outerDenInt)
+          (IUni.cachedBernVector M basisInt (certificateInt.getD (10+j) [])))) = true := by
+  decide +kernel
+
+theorem normalization_chunk_rows02 :
+    ∀ j < 5,
+      Uni.checkEq (Bi.normalizedRow N p qc rq a b (10+j))
+        (Uni.bernVector M (A.getD (10+j) [])) = true := by
+  intro j hj
+  have hiN : 10+j < N+1 := by simp only [N]; omega
+  have ho := Erdos993Lean.F4Fast.forall_lt_of_range_all
+    integer_normalization_checks02 j hj
+  have hs := Bool.and_eq_true_iff.mp ho
+  have hs' := Bool.and_eq_true_iff.mp hs.1
+  have hDA := of_decide_eq_true hs'.1
+  have hrows := hs'.2
+  have hdens : ∀ k < M+1,
+      (certificateSourceDenInt.getD (10+j) []).getD k 1 ≠ 0 := by
+    intro k hk
+    rw [integer_source_den_default (10+j) k hiN hk]
+    have hr := List.all_eq_true.mp hrows k (List.mem_range.mpr hk)
+    exact of_decide_eq_true (Bool.and_eq_true_iff.mp hr).1
+  have hcross : ∀ k < M+1,
+      (certificateSourceNumInt.getD (10+j) []).getD k 0 *
+          certificateDenInt.getD (10+j) 0 =
+        (certificateInt.getD (10+j) []).getD k 0 *
+          (certificateSourceDenInt.getD (10+j) []).getD k 1 := by
+    intro k hk
+    rw [integer_source_den_default (10+j) k hiN hk]
+    have hr := List.all_eq_true.mp hrows k (List.mem_range.mpr hk)
+    exact of_decide_eq_true (Bool.and_eq_true_iff.mp hr).2
+  have hA := IUni.ratioMatrix_row_coeffs N M A certificateSourceNumInt
+    certificateSourceDenInt (certificateInt.getD (10+j) [])
+    (certificateDenInt.getD (10+j) 0) (10+j) hiN
+    integer_source_A hDA hdens hcross
+  exact Bi.normalizedRow_checkEq_of_integer_clear N M p (A.getD (10+j) [])
+    qc rq a b compositionInt outerInt basisInt (certificateInt.getD (10+j) [])
+    (10+j) compositionDenInt outerDenInt (certificateDenInt.getD (10+j) 0)
+    integer_composition_den_ne_zero integer_outer_den_ne_zero hDA
+    integer_composition_checked integer_outer_checked integer_basis_checked hA hs.2
+
+theorem normalization_chunk_checks02 :
+    (List.range 5).all (fun j =>
+      Uni.checkEq (Bi.normalizedRow N p qc rq a b (10+j))
+        (Uni.bernVector M (A.getD (10+j) []))) = true := by
+  apply List.all_eq_true.mpr
+  intro j hj
+  exact normalization_chunk_rows02 j (List.mem_range.mp hj)
+
+end Erdos993Lean.BCFG.CertData.CHeavyB0

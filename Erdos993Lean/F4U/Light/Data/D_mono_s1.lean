@@ -1,0 +1,36 @@
+module
+public import Erdos993Lean.F4U.Light.Checker
+
+@[expose] public section
+/-! Literal source: D_mono_s1; all 6 controls, including directly checked faces. -/
+namespace F4U.Light.Data.D_mono_s1
+def sourceSHA256 : String := "e38c9dcd7dfe3957c641178c5383866151775d1dea857a2a536ecbc23b404ab1"
+def dataSHA256 : String := "8cfcfeb09cfa6c1d2fe4bc7f795e932587cab4e753c039763ccbc8c4c00ac6ed"
+def rows : List (List Int) := [
+  [492931575861898584439296, (-9340580066405524285207680), 44464789471613042511192960, (-86374455358868237365956672), 91972103588714918566987248, (-46492955070363313586464104), (-14369076548470118808960592), 35197330378639079633070688, (-19236378629503411323577567), 4380143586272314558523193, (-360921826782482462329050), 4878105409353515625000],
+  [0, (-123232893965474646109824), 16262130095958668142798720, (-78176677437110977201633536), 115494748195162835288961552, (-52208766244424094587328024), (-52295696812632390609660612), 91169989496076391709913268, (-54428139596774032093085051), 14430866807423860447962957, (-1458975644780320436645250), 24390527046767578125000],
+  [0, 0, 0, (-6534389457600139835676864), 23979173488339914713842704, (-4033581100398341310124728), (-51286874763566841109500684), 77356162119593332442285340, (-52453723454373181723388686), 17017050710355987144119898, (-2226684311296457123290500), 48781054093535156250000],
+  [0, 0, 0, 0, 253745094323997991868400, 1682230073662439690739192, (-13487253212322854179297420), 22178996513232983287113628, (-18568490067372793347431422), 8267387149247944329813882, (-1535417333032273373290500), 48781054093535156250000],
+  [0, 0, 0, 0, 0, 0, (-126998712918284870496756), 795493511076962921670868, (-1306475011205113279149155), 1306371465761796226503933, (-422075177384044811645250), 24390527046767578125000],
+  [0, 0, 0, 0, 0, 0, 0, 0, 52569065119114401065, 5311805718293151370185, (-15288337650390587329050), 4878105409353515625000]]
+def ctls : List F4U.Light.Ctl := [⟨0, .quad⟩, ⟨1, .quad⟩, ⟨2, .quad⟩, ⟨3, .quad⟩, ⟨4, .quad⟩, ⟨5, .quad⟩]
+def fn : F4U.Light.Fn :=
+  { m := 5, toQ := false, a1 := 4, a2 := 9, b1 := 13, b2 := 23,
+    c := 209, rad := 25, D := 414, rows := rows, ctls := ctls }
+
+theorem geom : F4U.Light.geomOK fn = true := by decide +kernel
+theorem shape : F4U.Light.shapeOK fn = true := by decide +kernel
+theorem c0 : F4U.Light.checkCtl fn ⟨0, .quad⟩ = true := by decide +kernel
+theorem c1 : F4U.Light.checkCtl fn ⟨1, .quad⟩ = true := by decide +kernel
+theorem c2 : F4U.Light.checkCtl fn ⟨2, .quad⟩ = true := by decide +kernel
+theorem c3 : F4U.Light.checkCtl fn ⟨3, .quad⟩ = true := by decide +kernel
+theorem c4 : F4U.Light.checkCtl fn ⟨4, .quad⟩ = true := by decide +kernel
+theorem c5 : F4U.Light.checkCtl fn ⟨5, .quad⟩ = true := by decide +kernel
+
+/-- Assembly uses the already checked controls without a second arithmetic evaluation. -/
+theorem checked : F4U.Light.checkFn fn = true := by
+  simp only [F4U.Light.checkFn, geom, shape, Bool.true_and]
+  change ctls.all (F4U.Light.checkCtl fn) = true
+  simp only [ctls, List.all_cons, List.all_nil, c0, c1, c2, c3, c4, c5, Bool.and_self]
+
+end F4U.Light.Data.D_mono_s1

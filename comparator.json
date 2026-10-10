@@ -1,0 +1,8 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": ["Erdos993.erdos_993_forest", "Erdos993.erdos_993"],
+  "definition_names": ["Erdos993.indepSeq", "Erdos993.UnimodalSeq"],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+  "enable_nanoda": true
+}

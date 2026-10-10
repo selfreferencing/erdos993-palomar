@@ -1,0 +1,100 @@
+module
+
+public import F4Heavy.Finite.TransformArithmetic
+
+@[expose] public section
+set_option autoImplicit false
+
+namespace F4Heavy.Finite
+
+def tail_ray_E1_16_numerator_power : List Fraction := [⟨-97407902032352002883082426790330368000000000, 1⟩, ⟨-681274056787762956679615428090488293868666880, 1⟩, ⟨-1878583276255030809431582697876126271630955520, 1⟩, ⟨-2356263053842718712314925751711754857260801408, 1⟩, ⟨-648802488813958404555472070987633553099932400, 1⟩, ⟨1705934270476419061769061885029598571554703296, 1⟩, ⟨1922566608632382296763009165210105708779660825, 1⟩, ⟨474621716557143358411277807308824751847138977, 1⟩, ⟨-333656646732096762038550426697944417437462120, 1⟩, ⟨-193388033223345843771678810016849567661063200, 1⟩, ⟨-8800243511235943410187728572936733200000000, 1⟩, ⟨4354581091546354381457446201914148000000000, 1⟩, ⟨-1176434694805157676948103740000000000000000, 1⟩, ⟨119858743937190241229943600000000000000000, 1⟩]
+def tail_ray_E1_16_numerator_controls : List Fraction := [Fraction.mul ⟨1, 1280000000⟩ (Fraction.mul ⟨3283012279324310489732637099175568494245691496463561088, 1⟩ ⟨1, 1⟩), Fraction.mul ⟨1, 1280000000⟩ (Fraction.mul ⟨48166153016264087527911604156046008320773132529464445376, 1⟩ ⟨1, 13⟩), Fraction.mul ⟨1, 1280000000⟩ (Fraction.mul ⟨323325253163429623022842144919687583846455066160626875872, 1⟩ ⟨1, 78⟩), Fraction.mul ⟨1, 1280000000⟩ (Fraction.mul ⟨1316571343684251407685090504582908217130525583618864360368, 1⟩ ⟨1, 286⟩), Fraction.mul ⟨1, 1280000000⟩ (Fraction.mul ⟨3631982113864407819655136143465223745711956294054901272872, 1⟩ ⟨1, 715⟩), Fraction.mul ⟨1, 1280000000⟩ (Fraction.mul ⟨7173778594982900072300959653368592457407276778715142846468, 1⟩ ⟨1, 1287⟩), Fraction.mul ⟨1, 1280000000⟩ (Fraction.mul ⟨10444043791206976034369109410446318452974497830767986764282, 1⟩ ⟨1, 1716⟩), Fraction.mul ⟨1, 1280000000⟩ (Fraction.mul ⟨11353411881866733027028446691146159938429411846569856273553, 1⟩ ⟨1, 1716⟩), Fraction.mul ⟨1, 1280000000⟩ (Fraction.mul ⟨9219474679387414618610407000607984963844470146111441082382, 1⟩ ⟨1, 1287⟩), Fraction.mul ⟨1, 1280000000⟩ (Fraction.mul ⟨5525431966186593274999853909739977348207524404376613997463, 1⟩ ⟨1, 715⟩), Fraction.mul ⟨1, 1280000000⟩ (Fraction.mul ⟨2376296392230483041255723494700064781967202541493861705014, 1⟩ ⟨1, 286⟩), Fraction.mul ⟨1, 1280000000⟩ (Fraction.mul ⟨694628317300200816234336848761857228537209233768570824447, 1⟩ ⟨1, 78⟩), Fraction.mul ⟨1, 1280000000⟩ (Fraction.mul ⟨123726742162090017342821105870371403078334976315113738490, 1⟩ ⟨1, 13⟩), Fraction.mul ⟨1, 1280000000⟩ (Fraction.mul ⟨10143727257182781955009478637237754516431725928132252325, 1⟩ ⟨1, 1⟩)]
+
+theorem tail_ray_E1_16_numerator_coefficient_0 : (Fraction.positive ⟨3283012279324310489732637099175568494245691496463561088, 1⟩) = true := by
+  decide +kernel
+
+theorem tail_ray_E1_16_numerator_coefficient_1 : (Fraction.positive ⟨48166153016264087527911604156046008320773132529464445376, 1⟩) = true := by
+  decide +kernel
+
+theorem tail_ray_E1_16_numerator_coefficient_2 : (Fraction.positive ⟨323325253163429623022842144919687583846455066160626875872, 1⟩) = true := by
+  decide +kernel
+
+theorem tail_ray_E1_16_numerator_coefficient_3 : (Fraction.positive ⟨1316571343684251407685090504582908217130525583618864360368, 1⟩) = true := by
+  decide +kernel
+
+theorem tail_ray_E1_16_numerator_coefficient_4 : (Fraction.positive ⟨3631982113864407819655136143465223745711956294054901272872, 1⟩) = true := by
+  decide +kernel
+
+theorem tail_ray_E1_16_numerator_coefficient_5 : (Fraction.positive ⟨7173778594982900072300959653368592457407276778715142846468, 1⟩) = true := by
+  decide +kernel
+
+theorem tail_ray_E1_16_numerator_coefficient_6 : (Fraction.positive ⟨10444043791206976034369109410446318452974497830767986764282, 1⟩) = true := by
+  decide +kernel
+
+theorem tail_ray_E1_16_numerator_coefficient_7 : (Fraction.positive ⟨11353411881866733027028446691146159938429411846569856273553, 1⟩) = true := by
+  decide +kernel
+
+theorem tail_ray_E1_16_numerator_coefficient_8 : (Fraction.positive ⟨9219474679387414618610407000607984963844470146111441082382, 1⟩) = true := by
+  decide +kernel
+
+theorem tail_ray_E1_16_numerator_coefficient_9 : (Fraction.positive ⟨5525431966186593274999853909739977348207524404376613997463, 1⟩) = true := by
+  decide +kernel
+
+theorem tail_ray_E1_16_numerator_coefficient_10 : (Fraction.positive ⟨2376296392230483041255723494700064781967202541493861705014, 1⟩) = true := by
+  decide +kernel
+
+theorem tail_ray_E1_16_numerator_coefficient_11 : (Fraction.positive ⟨694628317300200816234336848761857228537209233768570824447, 1⟩) = true := by
+  decide +kernel
+
+theorem tail_ray_E1_16_numerator_coefficient_12 : (Fraction.positive ⟨123726742162090017342821105870371403078334976315113738490, 1⟩) = true := by
+  decide +kernel
+
+theorem tail_ray_E1_16_numerator_coefficient_13 : (Fraction.positive ⟨10143727257182781955009478637237754516431725928132252325, 1⟩) = true := by
+  decide +kernel
+
+theorem tail_ray_E1_16_numerator_scale_positive : (Fraction.positive ⟨1, 1280000000⟩) = true := by
+  decide +kernel
+
+theorem tail_ray_E1_16_numerator_reconstruct : (Fraction.allEq (bernstein tail_ray_E1_16_numerator_power ⟨13, 10⟩ ⟨29, 20⟩ 13) tail_ray_E1_16_numerator_controls) = true := by
+  decide +kernel
+
+def tail_ray_E1_16_denominator_power : List Fraction := [⟨0, 1⟩, ⟨0, 1⟩, ⟨36675555657794641843101146453397995520000000, 1⟩, ⟨236437086619847861577503191040387973120000000, 1⟩, ⟨623297328595848639629298095531596185600000000, 1⟩, ⟨852579757403294158015482892331778048000000000, 1⟩, ⟨625804145613448395311797077320663040000000000, 1⟩, ⟨219444738085419214288837883933491200000000000, 1⟩, ⟨17273663512393873555980288000000000000000000, 1⟩, ⟨-5410888729075683541647360000000000000000000, 1⟩]
+def tail_ray_E1_16_denominator_controls : List Fraction := [Fraction.mul ⟨8595242159576186880000, 1⟩ (Fraction.mul ⟨1164405763712717172320128, 1⟩ ⟨1, 1⟩), Fraction.mul ⟨8595242159576186880000, 1⟩ (Fraction.mul ⟨11191197171185995784580032, 1⟩ ⟨1, 9⟩), Fraction.mul ⟨8595242159576186880000, 1⟩ (Fraction.mul ⟨47796941805459346147961824, 1⟩ ⟨1, 36⟩), Fraction.mul ⟨8595242159576186880000, 1⟩ (Fraction.mul ⟨119062138836584850659317936, 1⟩ ⟨1, 84⟩), Fraction.mul ⟨8595242159576186880000, 1⟩ (Fraction.mul ⟨190631316140428561724801768, 1⟩ ⟨1, 126⟩), Fraction.mul ⟨8595242159576186880000, 1⟩ (Fraction.mul ⟨203448906625956184203803332, 1⟩ ⟨1, 126⟩), Fraction.mul ⟨8595242159576186880000, 1⟩ (Fraction.mul ⟨144729239310337864407097530, 1⟩ ⟨1, 84⟩), Fraction.mul ⟨8595242159576186880000, 1⟩ (Fraction.mul ⟨66176221659779011930059825, 1⟩ ⟨1, 36⟩), Fraction.mul ⟨8595242159576186880000, 1⟩ (Fraction.mul ⟨17647937066220938294215500, 1⟩ ⟨1, 9⟩), Fraction.mul ⟨8595242159576186880000, 1⟩ (Fraction.mul ⟨2091375792629184251885625, 1⟩ ⟨1, 1⟩)]
+
+theorem tail_ray_E1_16_denominator_coefficient_0 : (Fraction.positive ⟨1164405763712717172320128, 1⟩) = true := by
+  decide +kernel
+
+theorem tail_ray_E1_16_denominator_coefficient_1 : (Fraction.positive ⟨11191197171185995784580032, 1⟩) = true := by
+  decide +kernel
+
+theorem tail_ray_E1_16_denominator_coefficient_2 : (Fraction.positive ⟨47796941805459346147961824, 1⟩) = true := by
+  decide +kernel
+
+theorem tail_ray_E1_16_denominator_coefficient_3 : (Fraction.positive ⟨119062138836584850659317936, 1⟩) = true := by
+  decide +kernel
+
+theorem tail_ray_E1_16_denominator_coefficient_4 : (Fraction.positive ⟨190631316140428561724801768, 1⟩) = true := by
+  decide +kernel
+
+theorem tail_ray_E1_16_denominator_coefficient_5 : (Fraction.positive ⟨203448906625956184203803332, 1⟩) = true := by
+  decide +kernel
+
+theorem tail_ray_E1_16_denominator_coefficient_6 : (Fraction.positive ⟨144729239310337864407097530, 1⟩) = true := by
+  decide +kernel
+
+theorem tail_ray_E1_16_denominator_coefficient_7 : (Fraction.positive ⟨66176221659779011930059825, 1⟩) = true := by
+  decide +kernel
+
+theorem tail_ray_E1_16_denominator_coefficient_8 : (Fraction.positive ⟨17647937066220938294215500, 1⟩) = true := by
+  decide +kernel
+
+theorem tail_ray_E1_16_denominator_coefficient_9 : (Fraction.positive ⟨2091375792629184251885625, 1⟩) = true := by
+  decide +kernel
+
+theorem tail_ray_E1_16_denominator_scale_positive : (Fraction.positive ⟨8595242159576186880000, 1⟩) = true := by
+  decide +kernel
+
+theorem tail_ray_E1_16_denominator_reconstruct : (Fraction.allEq (bernstein tail_ray_E1_16_denominator_power ⟨13, 10⟩ ⟨29, 20⟩ 9) tail_ray_E1_16_denominator_controls) = true := by
+  decide +kernel
+
+end F4Heavy.Finite

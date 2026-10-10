@@ -1,0 +1,211 @@
+module
+
+public import F4Heavy.Finite.Arithmetic
+
+@[expose] public section
+set_option autoImplicit false
+
+namespace F4Heavy.Finite
+open Fraction
+
+-- Source assertions.json[760]: H.r6.1.1.V3 positive parent control 6,3
+theorem cert_0760_H_r6_1_1_V3_positive_parent_control_6_3 :
+    (positive ⟨257951211781012510401900400893983946016654974863368637775844192215878487596050791868539300681884353591281509, 212243765493760⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[761]: H.r6.1.1.V3 positive parent control 6,4
+theorem cert_0761_H_r6_1_1_V3_positive_parent_control_6_4 :
+    (positive ⟨51626690718569875036978840739471985846796389760246962019100742182251217782219685821026614623819989641607635, 21224376549376⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[762]: H.r6.1.1.V3 positive parent control 6,5
+theorem cert_0762_H_r6_1_1_V3_positive_parent_control_6_5 :
+    (positive ⟨28771468973006856929125242520604315241765766569442932033557962214154421935584394749766620887749368310224501, 5306094137344⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[763]: H.r6.1.1.V3 positive parent control 6,6
+theorem cert_0763_H_r6_1_1_V3_positive_parent_control_6_6 :
+    (positive ⟨949479049485208775661022273776957274499986133883975490269565102994286380125594062093761813512177124183585, 82907720896⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[764]: H.r6.1.1.V3 positive parent control 6,7
+theorem cert_0764_H_r6_1_1_V3_positive_parent_control_6_7 :
+    (positive ⟨353456537054401325543396493193454440894229671001721051752650826420769866396413203109347181535780870124551, 15943792480⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[765]: H.r6.1.1.V3 positive parent control 6,8
+theorem cert_0765_H_r6_1_1_V3_positive_parent_control_6_8 :
+    (positive ⟨2048384860726351875256177647116724722407702072198238205222024528475863223022208058221364960007060730028829, 51817325560⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[766]: H.r6.1.1.V3 positive parent control 6,9
+theorem cert_0766_H_r6_1_1_V3_positive_parent_control_6_9 :
+    (positive ⟨170107897538607270466567108959719211476393967483450975741946778748305783656073632953357297736793115927097, 2590866278⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[767]: H.r6.1.1.V3 positive parent control 6,10
+theorem cert_0767_H_r6_1_1_V3_positive_parent_control_6_10 :
+    (positive ⟨132875078370024286332127654737405394956436302146364197654416040748057797194323570658370802970264695483728, 1295433139⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[768]: H.r6.1.1.V3 positive parent control 6,11
+theorem cert_0768_H_r6_1_1_V3_positive_parent_control_6_11 :
+    (positive ⟨17879257915058504257774880829535412644792096828175110411637197808507278403118605117063490355762827829024, 117766649⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[769]: H.r6.1.1.V3 positive parent control 7,0
+theorem cert_0769_H_r6_1_1_V3_positive_parent_control_7_0 :
+    (positive ⟨99233224002204458222258241121510833737889726847204606526704629000562500704983007677151885025720931876149, 100233183232⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[770]: H.r6.1.1.V3 positive parent control 7,1
+theorem cert_0770_H_r6_1_1_V3_positive_parent_control_7_1 :
+    (positive ⟨242848777264102075896048550176318994587726338161787797557292108821918121190597894122367423986454588558553, 250582958080⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[771]: H.r6.1.1.V3 positive parent control 7,2
+theorem cert_0771_H_r6_1_1_V3_positive_parent_control_7_2 :
+    (positive ⟨6099628197902171094271016327978890380788672704240243910703717538247648082250226857316481853701438312255771, 6187864883200⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[772]: H.r6.1.1.V3 positive parent control 7,3
+theorem cert_0772_H_r6_1_1_V3_positive_parent_control_7_3 :
+    (positive ⟨19856744892504645769193724947997302134526263782764911090861653060407845613628332486994659830675413306833889, 15160268963840⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[773]: H.r6.1.1.V3 positive parent control 7,4
+theorem cert_0773_H_r6_1_1_V3_positive_parent_control_7_4 :
+    (positive ⟨653191532671736592035803965299673465476052364822150069523197056622102312176645597498757959672399314242941, 265039667200⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[774]: H.r6.1.1.V3 positive parent control 7,5
+theorem cert_0774_H_r6_1_1_V3_positive_parent_control_7_5 :
+    (positive ⟨110388148901837795390924881825313042582246936225150866670500031746752041392099091198889537460417792042911, 20824545280⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[775]: H.r6.1.1.V3 positive parent control 7,6
+theorem cert_0775_H_r6_1_1_V3_positive_parent_control_7_6 :
+    (positive ⟨9160389230388498760728662804376466761375323814180146783147542419812366634503078091697309078760490127109943, 829077208960⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[776]: H.r6.1.1.V3 positive parent control 7,7
+theorem cert_0776_H_r6_1_1_V3_positive_parent_control_7_7 :
+    (positive ⟨78929205090877267629526056679004191266502377405641539628593809765856863454241833446691326277136216862069, 3701237540⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[777]: H.r6.1.1.V3 positive parent control 7,8
+theorem cert_0777_H_r6_1_1_V3_positive_parent_control_7_8 :
+    (positive ⟨140927854474653297165491247492536140401861829057573788206554067280489389988253970160354815299775504247861, 3701237540⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[778]: H.r6.1.1.V3 positive parent control 7,9
+theorem cert_0778_H_r6_1_1_V3_positive_parent_control_7_9 :
+    (positive ⟨293506422554704685863268915735815479874612121490674973062584753595337527559193609010101835287271608166853, 4626546925⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[779]: H.r6.1.1.V3 positive parent control 7,10
+theorem cert_0779_H_r6_1_1_V3_positive_parent_control_7_10 :
+    (positive ⟨13153643147056112629363238536349661154153085753024842900257552258800851012938972024098557032140093032848, 132187055⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[780]: H.r6.1.1.V3 positive parent control 7,11
+theorem cert_0780_H_r6_1_1_V3_positive_parent_control_7_11 :
+    (positive ⟨1777910208671145079469048335460272322207368646900215233535994564273460613049527542099580313990368877376, 12017005⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[781]: H.r6.1.1.V3 positive parent control 8,0
+theorem cert_0781_H_r6_1_1_V3_positive_parent_control_8_0 :
+    (positive ⟨104054339807083373853301608692951292709716394436044649778545207228642286863178139712761986030555015216197851, 101298160803840⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[782]: H.r6.1.1.V3 positive parent control 8,1
+theorem cert_0782_H_r6_1_1_V3_positive_parent_control_8_1 :
+    (positive ⟨17350529997286733349061087389344942996141999287166638537492429142103845333759138317959462579012994650086313, 16883026800640⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[783]: H.r6.1.1.V3 positive parent control 8,2
+theorem cert_0783_H_r6_1_1_V3_positive_parent_control_8_2 :
+    (positive ⟨5879367775189732750255953152285460445719048499744637363915515016648371340577537217657584805362689951213354723, 5571398844211200⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[784]: H.r6.1.1.V3 positive parent control 8,3
+theorem cert_0784_H_r6_1_1_V3_positive_parent_control_8_3 :
+    (positive ⟨1893451675280785341837323017783008343120632234572460378132661477311135070795735967674622466778932308642534629, 1392849711052800⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[785]: H.r6.1.1.V3 positive parent control 8,4
+theorem cert_0785_H_r6_1_1_V3_positive_parent_control_8_4 :
+    (positive ⟨564855717577291599250292996212661434297600156734331428541790316164383014745349508936551321786065664004188293, 232141618508800⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[786]: H.r6.1.1.V3 positive parent control 8,5
+theorem cert_0786_H_r6_1_1_V3_positive_parent_control_8_5 :
+    (positive ⟨16113442729761456779144511527394895384570672902587132473893048722168566297711005663999950182536824698368799, 3165567525120⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[787]: H.r6.1.1.V3 positive parent control 8,6
+theorem cert_0787_H_r6_1_1_V3_positive_parent_control_8_6 :
+    (positive ⟨1431019109388681096578659674685957145729783545303332965970563499566817114067741860301972451281591475833126, 136020479595⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[788]: H.r6.1.1.V3 positive parent control 8,7
+theorem cert_0788_H_r6_1_1_V3_positive_parent_control_8_7 :
+    (positive ⟨9207455140005973276775488358185854487116588296703184903516653094638217919128519392205337125442067167481169, 453401598650⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[789]: H.r6.1.1.V3 positive parent control 8,8
+theorem cert_0789_H_r6_1_1_V3_positive_parent_control_8_8 :
+    (positive ⟨24743611772275314510714543685948515132155837049220392210384914586005649688594164333729918324561636749047834, 680102397975⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[790]: H.r6.1.1.V3 positive parent control 8,9
+theorem cert_0790_H_r6_1_1_V3_positive_parent_control_8_9 :
+    (positive ⟨41418597510575670172029580672986357763372323060668756412491463309267344267780648291999034763329592121123048, 680102397975⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[791]: H.r6.1.1.V3 positive parent control 8,10
+theorem cert_0791_H_r6_1_1_V3_positive_parent_control_8_10 :
+    (positive ⟨395777985258197801007709494962889056160215517967136419796931304301995157408151110378481258613182187973376, 4121832715⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[792]: H.r6.1.1.V3 positive parent control 8,11
+theorem cert_0792_H_r6_1_1_V3_positive_parent_control_8_11 :
+    (positive ⟨354987425624088192842437047608679515252784364200844740245636188590003372542562171137344992266625643678208, 2473099629⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[793]: H.r6.1.1.V3 positive parent control 9,0
+theorem cert_0793_H_r6_1_1_V3_positive_parent_control_9_0 :
+    (positive ⟨248067402112123496095422406473898272160040064089091632225797446789304500923136052429933804837237060141196149, 236362375208960⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[794]: H.r6.1.1.V3 positive parent control 9,1
+theorem cert_0794_H_r6_1_1_V3_positive_parent_control_9_1 :
+    (positive ⟨1383713405073137670198596400725119886923148331920401779350377037745950775944229698649790789386696264645735007, 1299993063649280⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[795]: H.r6.1.1.V3 positive parent control 9,2
+theorem cert_0795_H_r6_1_1_V3_positive_parent_control_9_2 :
+    (positive ⟨2842616280798826573802030309479410255792702672893195896795865886146029037198251464429723978376533286522282313, 2599986127298560⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[796]: H.r6.1.1.V3 positive parent control 9,3
+theorem cert_0796_H_r6_1_1_V3_positive_parent_control_9_3 :
+    (positive ⟨4433566760229438254380161199706670964649779542499369115004707296334927753694044420760675518181129598887024751, 3249982659123200⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[797]: H.r6.1.1.V3 positive parent control 9,4
+theorem cert_0797_H_r6_1_1_V3_positive_parent_control_9_4 :
+    (positive ⟨3800120103659831172768687666176838479084100946139298036021861894457639847530354724237753148825770679569894927, 1624991329561600⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[798]: H.r6.1.1.V3 positive parent control 9,5
+theorem cert_0798_H_r6_1_1_V3_positive_parent_control_9_5 :
+    (positive ⟨389203832902472201855317697497035655613410058174773428783785565507469202989699986069179514243787409087477863, 81249566478080⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[799]: H.r6.1.1.V3 positive parent control 9,6
+theorem cert_0799_H_r6_1_1_V3_positive_parent_control_9_6 :
+    (positive ⟨100210274094607964902958330137728073105654523801149799770038486033779348582694958557433786358943434716859249, 10156195809760⟩) = true := by
+  decide +kernel
+
+end F4Heavy.Finite

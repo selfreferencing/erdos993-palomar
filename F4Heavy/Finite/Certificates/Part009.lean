@@ -1,0 +1,211 @@
+module
+
+public import F4Heavy.Finite.Arithmetic
+
+@[expose] public section
+set_option autoImplicit false
+
+namespace F4Heavy.Finite
+open Fraction
+
+-- Source assertions.json[360]: E1.r8.U2 positive parametric square quotient 4,7
+theorem cert_0360_E1_r8_U2_positive_parametric_square_quotient_4_7 :
+    (positive ⟨7733694216745893575172404492942584654261926210322396060199192549040950880000, 2087740852220507099⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[361]: E1.r8.U2 positive parametric square quotient 4,8
+theorem cert_0361_E1_r8_U2_positive_parametric_square_quotient_4_8 :
+    (positive ⟨15927067700148646166031097136644225272209811329424874747104575321629971840000, 4447795728643689037⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[362]: E1.r8.U2 positive parametric square quotient 4,9
+theorem cert_0362_E1_r8_U2_positive_parametric_square_quotient_4_9 :
+    (positive ⟨32779375947914317604831481742255820058243171209038386321990995257561236480000, 9475738726240902731⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[363]: E1.r8.U2 positive parametric square quotient 4,10
+theorem cert_0363_E1_r8_U2_positive_parametric_square_quotient_4_10 :
+    (positive ⟨67417281635419581918767891223596032880107981417601008428543528320815948800000, 20187443373295836253⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[364]: E1.r8.U2 positive parametric square quotient 4,11
+theorem cert_0364_E1_r8_U2_positive_parametric_square_quotient_4_11 :
+    (positive ⟨12596261618817981618139545631020074619004121968908232452165310956751488000000, 3909821048582988049⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[365]: E1.r8.U2 positive parametric square quotient 5,0
+theorem cert_0365_E1_r8_U2_positive_parametric_square_quotient_5_0 :
+    (positive ⟨612566671400169270875785238122955244319928931503668831558537715521920000, 952809757913927⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[366]: E1.r8.U2 positive parametric square quotient 5,1
+theorem cert_0366_E1_r8_U2_positive_parametric_square_quotient_5_1 :
+    (positive ⟨14053425755768267304277757980019650913086191765385651954870776132870720000, 22328889544156811⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[367]: E1.r8.U2 positive parametric square quotient 5,2
+theorem cert_0367_E1_r8_U2_positive_parametric_square_quotient_5_2 :
+    (positive ⟨29322850603044744943209965342556058065334161594590097341820530859671424000, 47570242941899293⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[368]: E1.r8.U2 positive parametric square quotient 5,3
+theorem cert_0368_E1_r8_U2_positive_parametric_square_quotient_5_3 :
+    (positive ⟨61210692013617356038503793219991602340321831615273301179090945735190912000, 101345300180568059⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[369]: E1.r8.U2 positive parametric square quotient 5,4
+theorem cert_0369_E1_r8_U2_positive_parametric_square_quotient_5_4 :
+    (positive ⟨18262270443741571745370483234821968734560679382150374365216930805900480000, 30844221794085931⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[370]: E1.r8.U2 positive parametric square quotient 5,5
+theorem cert_0370_E1_r8_U2_positive_parametric_square_quotient_5_5 :
+    (positive ⟨267108588366751975862603457932093068941901045998916801317419942872668960000, 459981220668324971⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[371]: E1.r8.U2 positive parametric square quotient 5,6
+theorem cert_0371_E1_r8_U2_positive_parametric_square_quotient_5_6 :
+    (positive ⟨3908707341621733792067294873823175486409960353914269995101294039304944960000, 6859719943010237611⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[372]: E1.r8.U2 positive parametric square quotient 5,7
+theorem cert_0372_E1_r8_U2_positive_parametric_square_quotient_5_7 :
+    (positive ⟨1167870509754061110970621927983667526853272640464009236546170871365891072000, 2087740852220507099⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[373]: E1.r8.U2 positive parametric square quotient 5,8
+theorem cert_0373_E1_r8_U2_positive_parametric_square_quotient_5_8 :
+    (positive ⟨106251740282161160127747320371035044892135597280097859961215532664036352000, 193382422984508219⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[374]: E1.r8.U2 positive parametric square quotient 5,9
+theorem cert_0374_E1_r8_U2_positive_parametric_square_quotient_5_9 :
+    (positive ⟨730868084135369704301118272542894208369843463675283514255178273649413120000, 1353676960891557533⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[375]: E1.r8.U2 positive parametric square quotient 5,10
+theorem cert_0375_E1_r8_U2_positive_parametric_square_quotient_5_10 :
+    (positive ⟨10715324903403606494296667265151145248679682333276667763274661381978798080000, 20187443373295836253⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[376]: E1.r8.U2 positive parametric square quotient 5,11
+theorem cert_0376_E1_r8_U2_positive_parametric_square_quotient_5_11 :
+    (positive ⟨2041098894616175101864495965840588647474402101901306301087650576527564800000, 3909821048582988049⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[377]: E1.r8.U2 positive parametric square discriminant control 0
+theorem cert_0377_E1_r8_U2_positive_parametric_square_discriminant_control_0 :
+    (positive ⟨19394196260663227881810125878429601292885510989345412340941335871293520197818602278020844971998172593205712006373610308910913525413625736240234375, 929634749210620083616502334800896⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[378]: E1.r8.U2 positive parametric square discriminant control 1
+theorem cert_0378_E1_r8_U2_positive_parametric_square_discriminant_control_1 :
+    (positive ⟨126035681127758889338490654392552177889525326515298483460164257697286921561101212442666833536054073601952726424601339485983870014020852243212890625, 3112255464748597671237855642594304⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[379]: E1.r8.U2 positive parametric square discriminant control 2
+theorem cert_0379_E1_r8_U2_positive_parametric_square_discriminant_control_2 :
+    (positive ⟨18638843357264425904872652992851582273907061096226238731554389000750004600710016091034717232966835238014408017643754805992930545724078704540791015625, 324892407428755782984438756429083648⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[380]: E1.r8.U2 positive parametric square discriminant control 3
+theorem cert_0380_E1_r8_U2_positive_parametric_square_discriminant_control_3 :
+    (positive ⟨24774236266177281212700197314493592462547381323458891098474620117611843134656434119303081664162253786293621222266382250299386817486898452882232421875, 346081042695848551439945631848371712⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[381]: E1.r8.U2 positive parametric square discriminant control 4
+theorem cert_0381_E1_r8_U2_positive_parametric_square_discriminant_control_4 :
+    (positive ⟨1166310098776980018207246797876343065029304355322282125172562505414907663985309947338131553525963391456296770790301390728377922774705469601322146484375, 14008758728253695712634321010905828864⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[382]: E1.r8.U2 positive parametric square discriminant control 5
+theorem cert_0382_E1_r8_U2_positive_parametric_square_discriminant_control_5 :
+    (positive ⟨2760609209028459037094347917997243727457723068139520151948631474906138359304575769729629120195066304326709783001965906918913975206691964182623017578125, 29844746855844829996481814327581983232⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[383]: E1.r8.U2 positive parametric square discriminant control 6
+theorem cert_0383_E1_r8_U2_positive_parametric_square_discriminant_control_6 :
+    (positive ⟨107481278245987997452467638476151181859687591937579745820481020848173113345365032354243201773365690678527310265891635433268461769233563066154268173828125, 1080898875257336669003015275429382262272⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[384]: E1.r8.U2 positive parametric square discriminant control 7
+theorem cert_0384_E1_r8_U2_positive_parametric_square_discriminant_control_7 :
+    (positive ⟨137108231946013704752126080305262778968546885998565819698843026989474056703344544707615350302775148240974708435370578540457004646949462248212949208984375, 1315876891617627249221062074435769710592⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[385]: E1.r8.U2 positive parametric square discriminant control 8
+theorem cert_0385_E1_r8_U2_positive_parametric_square_discriminant_control_8 :
+    (positive ⟨299689210961160764023744304546347811220801162475230984024507668124638448962327084508433007693438906934573406666435044334864834546546314613778236833984375, 2803389899533205878775306158580552861696⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[386]: E1.r8.U2 positive parametric square discriminant control 9
+theorem cert_0386_E1_r8_U2_positive_parametric_square_discriminant_control_9 :
+    (positive ⟨4502125957671353158369407687594662781487641610266375232081512938127408733421432187083637072597223545753947106480617288631924102011746727882190177779296875, 41807075458256070279127391843179549198336⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[387]: E1.r8.U2 positive parametric square discriminant control 10
+theorem cert_0387_E1_r8_U2_positive_parametric_square_discriminant_control_10 :
+    (positive ⟨123525617420812044371758912213405447547675657234470275055768973043744826930892433773684554448876186735809152957007683387696993832433367784148982939052734375, 1157874220300396381208876026265450993014784⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[388]: E1.r8.U2 positive parametric square discriminant control 11
+theorem cert_0388_E1_r8_U2_positive_parametric_square_discriminant_control_11 :
+    (positive ⟨5831573180192739085262830123297479503544043031629676815496836633809502596648277375090740028490314053279824081425941350108586665356720801617060407197265625, 56063079836679271422168898504947725946368⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[389]: E1.r8.U2 positive parametric square discriminant control 12
+theorem cert_0389_E1_r8_U2_positive_parametric_square_discriminant_control_12 :
+    (positive ⟨37926599002246013046847213172184095155123558499326461540863498369300290194779924140885851176741188496570532949104332819495299056141229472963394111328125, 379938140065508176334008553501229968128⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[390]: E1.r8.U2 positive parametric square discriminant control 13
+theorem cert_0390_E1_r8_U2_positive_parametric_square_discriminant_control_13 :
+    (positive ⟨5071986132228369714198266685571680267272836910590188235758563112719312118321006019723295222362786089328372686617211044071854359233980245982512467517578125, 53827323017541669242798559634076428310656⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[391]: E1.r8.U2 positive parametric square discriminant control 14
+theorem cert_0391_E1_r8_U2_positive_parametric_square_discriminant_control_14 :
+    (positive ⟨130099808136738489972233700773620439837400420877834223101830297802243611157729039954414242996278092392401456147480919876722740684947874511440622724609375, 1489293522224473062053715088689861652864⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[392]: E1.r8.U2 positive parametric square discriminant control 15
+theorem cert_0392_E1_r8_U2_positive_parametric_square_discriminant_control_15 :
+    (positive ⟨692240512722125431950617467295996539402520200395413590454953247585765344149613099678457795409302761057335387637038201540806883228949787812106136357421875, 8725317483467293265727743834824298161888⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[393]: E1.r8.U2 positive parametric square discriminant control 16
+theorem cert_0393_E1_r8_U2_positive_parametric_square_discriminant_control_16 :
+    (positive ⟨571635648129995797871435334947138684168411716442888349765154736773461019731932433531920550001722891947833019058858322552758574744272564718292285537109375, 8132564937036091277566891672132430080238⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[394]: E1.r8.U2 positive parametric square discriminant control 17
+theorem cert_0394_E1_r8_U2_positive_parametric_square_discriminant_control_17 :
+    (positive ⟨122980519285544403573657057636049624120888931653640043520476654616322021938385979871641524485503906402680361957341264118553755307359591864851480712890625, 2038341083963010090029553411429611631364⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[395]: E1.r8.U2 positive parametric square discriminant control 18
+theorem cert_0395_E1_r8_U2_positive_parametric_square_discriminant_control_18 :
+    (positive ⟨215321303847350879249669608306848383358811499203024202428379584877159818556744217665548559339457947526026834196153388247537191227208775719704233501953125, 4342552744095108452671657267828303040732⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[396]: E1.r8.U2 positive parametric square discriminant control 19
+theorem cert_0396_E1_r8_U2_positive_parametric_square_discriminant_control_19 :
+    (positive ⟨4644318882011358148769608476027348465787670356944719812387518391180726986710813447574699940511613278132231113968589444995478404624069334336947943359375, 121730597517540225503953779246903231691⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[397]: E1.r8.U2 positive parametric square discriminant control 20
+theorem cert_0397_E1_r8_U2_positive_parametric_square_discriminant_control_20 :
+    (positive ⟨6780756428768743390898305386717694143846190806240088808556485432976319092197521589377763426561322075566352897219789592941668701931990466886691777343750, 259339099059107436943205877526011232733⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[398]: E1.r8.U2 positive parametric square discriminant control 21
+theorem cert_0398_E1_r8_U2_positive_parametric_square_discriminant_control_21 :
+    (positive ⟨154124557032030991514919450078444673948093907307903786317995068303466718109278129670755057767979883208744910193112265105002792840581780623886914062500, 11275613002569888562748081631565705771⟩) = true := by
+  decide +kernel
+
+-- Source assertions.json[399]: E1.r8.U2 positive parametric square discriminant control 22
+theorem cert_0399_E1_r8_U2_positive_parametric_square_discriminant_control_22 :
+    (positive ⟨12518073554370204975032652003285457478221349876916852718870796873671828582750937069263341352993691053636317916843188945767379860442274864374023437500, 15286700631942576193765185769276826401⟩) = true := by
+  decide +kernel
+
+end F4Heavy.Finite

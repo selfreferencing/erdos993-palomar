@@ -1,0 +1,228 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+# formalization.yaml v0.4. 9 October 2026.
+version: "v0.4"
+
+project:
+  name: "Unimodality of the independence sequence of a finite forest (Erdős Problem 993)"
+  description: >-
+    A Lean 4 and Mathlib formalization of the theorem that the independence sequence of every finite forest is
+    unimodal: the numbers of independent sets with 0, 1, 2, ... vertices weakly increase up to some index and
+    weakly decrease after it. This is the statement listed as Erdős Problem 993; later sources attribute the
+    question to a 1987 paper of Alavi, Malde, Schwenk and Erdős. The first claimed proof for all finite forests is
+    by T. Zhang and W. Li (self-archived preprints, September 2026). This repository formalizes a second proof, by
+    W. Li, K. Vallier and T. Zhang: it adapts the public arXiv:2610.07943v1 and follows version 2.15 of that
+    manuscript, deposited with restricted access and under revision. The Lean proof is computer-assisted and in
+    two parts (at most 24 vertices; at least 25). About 13,700 finite computations are evaluated by the Lean
+    kernel, without native_decide, on the three standard axioms. AI systems produced and reviewed all of the
+    Lean; no human has read the Lean proofs. No manuscript cited is peer reviewed. No priority and no first
+    formalization is claimed.
+  authors: ["Kevin Vallier", "Tong Zhang"]
+  license: "Apache-2.0"
+  responsible_maintainers: ["Kevin Vallier"]
+
+classification:
+  arxiv: ["math.CO"]
+  msc2020: ["05C69", "05C05", "05C31", "05A20"]
+
+sources:
+  - title: "Unimodality of Forest Independence Polynomials"
+    authors: ["Wei Li", "Kevin Vallier", "Tong Zhang"]
+    year: 2026
+    id: "arXiv:2610.07943v1"
+    type: "paper"
+    location: "Main theorem (Section 1); Sections 2 and 3 (window, decomposition, choice of activity, moment criterion); statements of Theorems 4.3, 4.22 and 5.5"
+    relationship: "adapts"
+    note: >-
+      The public version of the manuscript (its version 2.2, posted 6 October 2026; also
+      doi:10.5281/zenodo.23182492). The main theorem is the same, and the Lean keeps this paper's reduction: the
+      window of ranks, the decomposition, the choice of activity, the moment criterion and the split at 24 and 25
+      vertices. The three bounds for every forest, the range of small means, the inequalities above the starting
+      means and the case of at most 24 vertices are proved in the Lean by later arguments of the same authors,
+      which this version does not contain. Its Sections 7 and 8 describe computations and an earlier Lean
+      development that are not this repository (see fidelity.divergences). Provisional preprint, not peer reviewed.
+    license: "arXiv.org non-exclusive distribution licence 1.0 (http://arxiv.org/licenses/nonexclusive-distrib/1.0/)"
+    author_endorsement: "participated"
+  - title: "Unimodality of Forest Independence Polynomials"
+    authors: ["Wei Li", "Kevin Vallier", "Tong Zhang"]
+    year: 2026
+    id: "doi:10.5281/zenodo.23269638"
+    type: "paper"
+    location: "Version 2.15: Theorem 1.1, restated as Theorem 2.9; Theorem 7.1 for at most 24 vertices"
+    relationship: "formalizes"
+    note: "Deposited on Zenodo with restricted files: the record is public, the files are available from the authors on request. The manuscript is being revised by its authors; it is not peer reviewed. The Lean was written against version 2.13; versions 2.14 and 2.15 record the corrections found during formalization."
+    license: "All rights reserved (no open licence). Restricted access: the record is public, the files are available from the authors on request"
+    author_endorsement: "participated"
+  - title: "Exact Certificates for Unimodality of Forest Independence Polynomials: A consolidated proof manuscript and reproducible supplement"
+    authors: ["Tong Zhang"]
+    year: 2026
+    id: "https://github.com/zhangzenozhang-jpg/-forest-unimodality-proof"
+    type: "paper"
+    location: "Manuscript, v1.1, 26 September 2026, as cited in the manuscript of the second proof"
+    relationship: "adapts"
+    note: "With the next entry, the first proof: the manuscript of the second proof attributes it to T. Zhang and W. Li and cites these two texts. Earliest public record we found: pull request #4551 of TheJustinSunPrize/awards (2026-09-26 02:13 UTC, commit 7cee5104). Self-archived, not peer reviewed. Module texts under Erdos993Lean/Zhang name this manuscript as the source of the decomposition relative to a maximum independent set and of the comparison row (1+z)^(a-v)(1+2z)^v."
+    author_endorsement: "participated"
+  - title: "Unimodality of Forest Independence Polynomials"
+    authors: ["Tong Zhang", "Wei Li"]
+    year: 2026
+    id: "doi:10.5281/zenodo.22999166"
+    type: "paper"
+    location: "Zenodo preprint, version label 2026-09-27"
+    relationship: "adapts"
+    note: "The first proof (with the previous entry): computer-assisted, large-order threshold 59, finite coverage through 60 vertices. Self-archived, not peer reviewed; we found no arXiv identifier. The second proof keeps its decomposition, binomial mixture and rank window (as credited in arXiv:2610.07943v1) and replaces the rest."
+    license: "CC-BY-4.0"
+    author_endorsement: "participated"
+  - {title: "The vertex independence sequence of a graph is not constrained", authors: ["Y. Alavi", "P. J. Malde", "A. J. Schwenk", "P. Erdős"], year: 1987, id: "Congressus Numerantium 58 (1987), 15-23; Zbl 0679.05061", type: "paper", location: "Problem 3, p. 21, as located by formal-conjectures pull request #4192", relationship: "background", note: "Origin of the question. Nobody on our side has read this paper. As reported by later sources: arXiv:2610.07943v1 prints its question as 'For trees (or perhaps forests), is the vertex independence sequence unimodal?'; the abstract of arXiv:math/0211036 reports the same form. Bibliographic data and main theorem checked in the zbMATH review."}
+  - {title: "Erdős Problem 993", id: "https://www.erdosproblems.com/993", type: "other", relationship: "background", note: "As read on 9 October 2026: the page shows no status word, was last edited on 1 February 2026, and lists two proof claims (Fang et al.; T. Zhang) under a notice that listing is no guarantee of correctness."}
+  - {title: "Unimodality of Independence Polynomials for Sufficiently Large Forests", authors: ["E. X. Fang", "J. Lu", "E. Nevo", "Y. Yao", "H. Zheng"], year: 2026, id: "arXiv:2609.20961v1", type: "paper", location: "Theorem 1.1", relationship: "background", note: "Posted 17 September 2026. Reports a proof for all forests with at least N0 vertices, N0 not explicit, with a Lean 4 formalization, and says the question for all sizes remains open. Preprint. Not used by the Lean."}
+  - {title: "Chromatic polynomials and logarithmic concavity", authors: ["S. G. Hoggar"], year: 1974, id: "doi:10.1016/0095-8956(74)90071-9", type: "paper", location: "J. Combin. Theory Ser. B 16 (1974), 248-254", relationship: "formalizes", note: "The module Erdos993Lean/Hoggar.lean states and proves a theorem that it attributes to this paper. Whether the final theorem depends on it at the level of declarations was not computed."}
+  - {title: "Normalized matching in direct products of partial orders", authors: ["W. N. Hsieh", "D. J. Kleitman"], year: 1973, id: "Stud. Appl. Math. 52 (1973), 285-289", type: "paper", relationship: "background", note: "As cited in the manuscript; not opened by us. Erdos993Lean/Ceiling/Tail.lean credits it, with the next entry, for the tail inequality, which the Lean proves itself."}
+  - {title: "The morphology of partially ordered sets", authors: ["L. H. Harper"], year: 1974, id: "J. Combin. Theory Ser. A 17 (1974), 44-58", type: "paper", relationship: "background", note: "As cited in the manuscript; not opened by us."}
+  # Background literature cited in the README. Journal data are given only where they were checked against the DOI registry.
+  - {title: "On the numbers of independent k-sets in a claw free graph", authors: ["Y. O. Hamidoune"], year: 1990, id: "doi:10.1016/0095-8956(90)90079-F", type: "paper", location: "J. Combin. Theory Ser. B 50 (1990), 241-244", relationship: "background"}
+  - {title: "The roots of the independence polynomial of a clawfree graph", authors: ["M. Chudnovsky", "P. Seymour"], year: 2007, id: "doi:10.1016/j.jctb.2006.06.001", type: "paper", location: "J. Combin. Theory Ser. B 97 (2007), 350-357", relationship: "background"}
+  - {title: "On Unimodality of Independence Polynomials of some Well-Covered Trees", authors: ["V. E. Levit", "E. Mandrescu"], year: 2002, id: "arXiv:math/0211036v1", type: "paper", location: "LNCS 2731 (2003), 237-256, doi:10.1007/3-540-45066-1_19", relationship: "background"}
+  - {title: "The independent set sequence of some families of trees", authors: ["D. Galvin", "J. Hilyard"], year: 2017, id: "arXiv:1701.02204v4", type: "paper", relationship: "background"}
+  - {title: "A symmetric function approach to log-concavity of independence polynomials", authors: ["E. Y. H. Li", "G. M. X. Li", "A. L. B. Yang", "Z.-X. Zhang"], year: 2025, id: "arXiv:2501.04245v1", type: "paper", location: "Selecta Math. 32 (2026), article 87, doi:10.1007/s00029-026-01195-1", relationship: "background"}
+  - {title: "On the independent set sequence of a tree", authors: ["A. Basit", "D. Galvin"], year: 2020, id: "arXiv:2006.12562v2", type: "paper", location: "Electron. J. Combin. 28(3) (2021), P3.23, doi:10.37236/9896", relationship: "background"}
+  - {title: "On computing of independence polynomials of trees", authors: ["O. Kadrawi", "V. E. Levit", "R. Yosef", "M. Mizrachi"], year: 2023, id: "doi:10.5772/intechopen.1001130", type: "paper", location: "in Recent Research in Polynomials, IntechOpen 2023", relationship: "background"}
+  - {title: "The independence polynomial of trees is not always log-concave starting from order 26", authors: ["O. Kadrawi", "V. E. Levit"], year: 2023, id: "arXiv:2305.01784v2", type: "paper", location: "Ars Math. Contemp. 25(4) (2025), P4.03, doi:10.26493/1855-3974.3207.2ad", relationship: "background"}
+  - {title: "Trees with non log-concave independent set sequences", authors: ["D. Galvin"], year: 2025, id: "arXiv:2502.10654v2", type: "paper", relationship: "background"}
+  - {title: "An AI enhanced approach to the tree unimodality conjecture", authors: ["E. Ramos", "S. Sun"], year: 2025, id: "arXiv:2510.18826v2", type: "paper", relationship: "background"}
+  - {title: "A bipartite graph with non-unimodal independent set sequence", authors: ["A. Bhattacharyya", "J. Kahn"], year: 2013, id: "arXiv:1301.1752v1", type: "paper", relationship: "background"}
+
+related_formalizations:
+  - {id: "https://github.com/google-deepmind/formal-conjectures/issues/5012", relationship: "other", note: "Issue opened 16 August 2026 by K. Vallier (AI-assisted, as disclosed there; open): a candidate statement for forests with IsAcyclic, counting with indepSetFinset, peak over all natural numbers. Erdos993Lean/Statement.lean counts the same way; count_eq in Erdos993Lean/PalomarBridge.lean relates it to the Challenge form."}
+  - id: "https://github.com/google-deepmind/formal-conjectures/pull/4192"
+    revision: "99e1ae34a3295d5974bf143810fe98db84f501f2"
+    relationship: "other"
+    note: >-
+      Statement only. File FormalConjectures/ErdosProblems/993.lean on the branch of this pull request, which was
+      open and not merged on 9 October 2026 (the file is absent from the main branch); it marks the forest and the
+      tree statement "research open". Challenge.lean takes its two definitions and the types of its two statements.
+      Mapping: Erdos993.erdos_993_forest is its erdos_993 (forests); Erdos993.erdos_993 is its
+      erdos_993.variants.tree (trees). Each statement differs from its counterpart in one token, the name; the two
+      definitions are identical. The other differences (attribute line, import, licence header, texts, four omitted
+      declarations about spiders) are listed in the module text of Challenge.lean. No proof is taken from it.
+  - id: "https://github.com/selfreferencing/erdos993-lean"
+    revision: "tag v1.0-claim (29 September 2026); the bridge to the formal-conjectures tree statement is commit c524aa28565dbde8b9b685c4c45511a6b434f3b5 on branch formal-conjectures-bridge"
+    relationship: "builds-on"
+    note: "This project's earlier public repository (version 1.0; created 2026-09-28, release of 2026-09-29 06:13 UTC). As its README describes it: a Lean 4 proof of the full statement, for at most 60 vertices by T. Zhang's certificates and for at least 61 by a different argument developed in this project and not independently reviewed; 271 native_decide evaluations, hence five axioms (the three standard ones and the two that trust the compiler). Not rebuilt for this entry. Erdos993Lean/PalomarBridge.lean here is adapted from its bridge at commit c524aa2, which targeted the tree statement."
+  - id: "https://github.com/lixiang90/forest-unimodality"
+    revision: "fc5696db"
+    relationship: "independent"
+    note: "An independent Lean 4 formalization, by another person, of T. Zhang's manuscript of 26 September 2026 (over acyclic graphs on Fin n). Created 2026-09-29; proof commit dated 2026-09-29 23:35 UTC. Its README reports a clean rebuild of all 31,598 modules on 2 October 2026 and the three standard axioms only; its one-line description still says verification is pending. We did not rebuild it. Neither work uses the other."
+  - id: "https://github.com/selfreferencing/erdos993-forest-unimodality-lean"
+    revision: "d174e4b6f8963abb349995606783200879aae74e"
+    relationship: "supersedes"
+    note: "This project's repository that accompanies arXiv:2610.07943v1 (commit of 2026-10-06 04:28 UTC; final theorem erdos993_v22_final, over forests on Fin n). As that paper reports: 411 compiled evaluations in the part for at least 25 vertices, hence five axioms. Not rebuilt for this entry. The present repository follows a later version of the manuscript and replaces every compiled evaluation by kernel evaluation."
+  - {id: "https://github.com/junwei-lu/Erdos_993_Tree_Independent_Set_Unimodality", revision: "b2a1d3e", relationship: "independent", note: "Created 2026-09-15, last commit 2026-09-21. Lean 4 formalization of Theorem 1.1 of Fang et al. (forests with at least N0 vertices, N0 existential). Its README reports no sorry and the three standard axioms. We did not rebuild it."}
+  - {id: "https://github.com/zouzh14/erdos-993-eventual", revision: "release v1 (2026-09-11)", relationship: "independent", note: "Preprint and Lean 4 formalization by Z. Zou of an eventual statement (forests with at least N0 vertices, N0 existential), released 11 September 2026. Its README says the threshold is existential and the all-orders problem is not settled. We did not rebuild it."}
+  - {id: "https://github.com/RichP0123/erdos993-floor38", relationship: "independent", note: "Created and pushed 2026-09-29. Its README reports a Lean proof, on the three standard axioms, that every forest with at most 37 vertices is unimodal, and says it does not settle the problem. We did not rebuild it."}
+
+status:
+  scope: >-
+    The full theorem: the independence sequence of every finite forest is unimodal (Erdos993.erdos_993_forest), and
+    in particular that of every finite tree (Erdos993.erdos_993). No weaker statement and no extra hypothesis. Not
+    claimed: log-concavity (false for trees from 26 vertices on), any bound on the position of the peak, or any
+    statement beyond forests.
+  sorry_count: 0  # Solution and everything it imports; the two statement placeholders of Challenge.lean are excluded.
+  sorry_in_definitions: 0
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+  main_results:
+    - {declaration: "Erdos993.erdos_993_forest", file: "Solution.lean", sorry_count: 0, axioms: ["propext", "Classical.choice", "Quot.sound"], comparator_config: "comparator.json"}
+    - {declaration: "Erdos993.erdos_993", file: "Solution.lean", sorry_count: 0, axioms: ["propext", "Classical.choice", "Quot.sound"], comparator_config: "comparator.json"}
+
+automation:
+  methods:
+    - method: "agent"
+      models: ["Claude Opus 5.5", "Claude Fable 5.1"]
+      framework: "Claude Code (Anthropic)"
+      tool_setup: "Claude Code agents wrote Lean modules and certificate data. A coordinating session rebuilt each delivered part from source, printed the axioms of its theorems and merged it; separate sessions compared Lean statements and transcribed tables with the manuscript."
+      cost: {wall_time: "about two weeks, late September to 9 October 2026", hardware: "local machines; rented cloud machines (16 vCPU, 32 GB) for builds and kernel checks"}
+    - method: "agent"
+      models: ["GPT-5.6 Sol", "GPT-6 Astra", "GPT-6 Sol", "GPT-6.1 Sol"]
+      framework: "Codex (OpenAI)"
+      tool_setup: "Codex workspaces wrote Lean modules, certificate generators and certificate data. T. Zhang produced the library F4Heavy with GPT-6.1 Sol through Codex (his own statement of 9 October 2026). Thomas Dias operated one of the Codex workspaces (the low-mean part)"
+    - method: "other"
+      models: ["GPT-6 Astra (Pro mode)"]
+      framework: "ChatGPT conversations (OpenAI)"
+      tool_setup: "Conversations whose prompts and results K. Vallier carried between systems. Which model wrote which part was not recorded."
+  notes: >-
+    K. Vallier directed the project: he set goals and priorities and decided what was merged and published. All of
+    the Lean and all of the certificate data were produced by AI systems, T. Zhang's library by an AI system that
+    he operated. The model names are those of Section 10 of the manuscript. Per-task model revisions were not
+    recorded, and the list is not claimed to be complete: the project log records one checker run by a model of
+    another Claude family. The two authors are responsible for the content. Review by AI systems is not
+    independent human review and is not presented as such.
+
+fidelity:
+  divergences: |-
+    Two comparisons, both made by AI systems on statements (for arXiv v1 also on the authors' change records);
+    Lean proofs were not read for either.
+
+    PART A. Against arXiv:2610.07943v1, the public version.
+    Same as that paper: the main theorem; the window (Proposition 2.3, Corollary 2.5); the decomposition and
+    mixture (Lemma 2.2, Proposition 3.2); the choice of activity (Lemmas 3.6 to 3.8, Theorem 3.9, Proposition
+    3.10); the moment criterion (Theorem 3.5, with one Laplace constraint); Lemma 4.30; the statements, constants
+    and starting means of Theorems 4.3, 4.22 and 5.5.
+    Different: (a) Theorem 4.3: other multipliers; exact rational comparisons replace interval checks.
+    (b) Theorem 4.40: only the tilt 0, with an explicit rate. (c) Theorem 4.22: nine activity rows, another local
+    payment. (d) Theorem 5.6 below the starting means: 28 certificates replace 779 boxes; lower edge 4/q.
+    (e) Section 5.3, Appendix B: proved anew, without interval arithmetic. (f) Theorem 6.1: a sharper mode bound;
+    203 parameter triples. (g) Sections 7 and 8 describe another Lean development (411 compiled evaluations, five
+    axioms).
+
+    PART B. Against version 2.15, the text the Lean follows (deposited with restricted access).
+    Compared text: version 2.15 of the manuscript. The comparison was made by AI systems, on statements only, for
+    all 93 numbered theorems, propositions and lemmas of version 2.13, at an earlier commit of the Lean. Version
+    2.14 corrected Lemma 6.9 and made eleven few-word edits towards the Lean; version 2.15 carries short remarks at
+    Lemma 5.21 and Subsection 5.8 that state the differences.
+    Differences that remain against version 2.15:
+    1. Theorem 5.1 on rows D, E1, E2, H: the Lean statement is the printed one, the proof is not. The Lean follows
+       a later construction of T. Zhang (Remark 9.1). Subsection 5.8 (Theorem 5.33, Lemmas 5.34 to
+       5.51, Tables 3 to 11), Appendix B (Table 20) and Table 18 describe objects the Lean does not contain; the
+       counts printed in Subsection 1.5 for these rows describe Subsection 5.8, not the Lean.
+    2. On those rows the Lean tail threshold is X <= 5/16 (row D) and X <= 1/4 (rows E1, E2, H) with conclusion
+       Z_w > 0; the text prints the threshold 1/8 and the bound Z_w > p/40 (Table 1, last column; Lemma 5.32).
+    3. Subsections 5.5 and 5.7 (Theorem 5.24, Lemmas 5.22, 5.25, 5.31, 5.32) and the chain and leaf clauses of
+       Theorem 5.26 are not used by the final theorem.
+    4. Lemma 5.21 has no Lean counterpart; the manuscript does not use it.
+    5. The sentence before Table 2 prints integer polynomials of exact degrees; the Lean proves degree bounds only.
+    6. Theorem 2.4: same statement; the Lean proof on the path is an earlier one that includes a kernel check of
+       181 + 247 integer pairs absent from the printed proof. Lemma 2.3 is not used.
+    7. Theorem 7.1 (at most 24 vertices): same statement; a Hall-type matching argument replaces alternating paths,
+       and the classification of Subsection 7.3 is replaced by kernel evaluation over 203 parameter triples.
+    8. Proof-level differences inside Lemmas 5.9 and 5.18 and in three places of Section 6 (Theorems 6.13, 6.15,
+       Lemma 6.17). Some Lean statements are split, stronger, or carry a harmless extra hypothesis (Lemma 5.29).
+    Not compared: proofs; supplementary data not printed in the text; several tables in part only.
+
+review:
+  status: "agent-reviewed"
+  reviewers:
+    - "AI review sessions in Claude Code (automated): rebuild from source and axiom audit of each part; comparison of Lean statements and transcribed tables with the manuscript"
+    - "Kernel checkers (automated): Lean's leanchecker, NanoDa and con-ron on the complete export; the registry's Comparator"
+  notes: >-
+    K. Vallier directed the project. He does not read Lean; he checked the statements of Challenge.lean against a
+    line-by-line plain-language gloss prepared by an AI system and confirmed that they state the conjecture; he
+    proposed a formal statement for forests publicly on 16 August 2026 (formal-conjectures issue 5012); he has not
+    checked the proofs. All Lean was produced by AI systems, T. Zhang's library by an AI system that he operated; he
+    states that he has not read its Lean code. T. Zhang had an AI system review the statement file Challenge.lean
+    line by line, and has himself read lines 67 to 97 of that file, which contain its four declarations (his
+    statements of 9 October 2026); these are the only lines of Lean code he has read, and he has not read the
+    proofs. No human has read the Lean proofs. Every comparison of the Lean with the manuscript was made by AI
+    systems, on statements only. No independent human expert review is claimed. On the manuscript's mathematics: T.
+    Zhang and W. Li have read the first four sections of the manuscript (T. Zhang, 9 October 2026) and have not yet
+    revised them; no human has yet read the remaining sections' proofs in full. Machine checks: four complete runs
+    on a tree whose code is that of this one (it differs in comments, LICENSE, README.md and formalization.yaml; a
+    fresh build of the comment-revised tree gave a byte-identical export): the complete export was accepted by
+    leanchecker, NanoDa and con-ron (9,949 s, 10,038 s and 10,260 s in total with the build, 16 vCPU and 32 GB) and
+    by the registry's sandboxed Comparator (10,108 s). The checkers were not re-run after the comment revision.
+
+alignment:
+  namespace: "Erdos993"
+  statements:
+    - {source: "The main theorem of arXiv:2610.07943v1 (Section 1), which is Theorem 1.1 of version 2.15 (restated there as Theorem 2.9): for every finite forest F the sequence i_0(F), ..., i_alpha(F) is unimodal", lean: "Erdos993.erdos_993_forest", module: "Challenge (statement); Solution (proof, from Erdos993Lean.Analytic.V213.Final through Erdos993Lean.PalomarBridge)", status: "proved", note: "The Lean statement is over any finite vertex type and all natural indices; the terms vanish beyond alpha, so the two forms agree. The bridge proves the passage from the form on Fin n with indices up to alpha. Named erdos_993 in formal-conjectures pull request #4192 at commit 99e1ae34."}
+    - {source: "The tree case: the special case of Theorem 1.1 for connected forests", lean: "Erdos993.erdos_993", module: "Challenge (statement); Solution (proof, from erdos_993_forest)", status: "proved", note: "Named erdos_993.variants.tree in formal-conjectures pull request #4192 at commit 99e1ae34."}
+    - {source: "i_k(G), the number of independent sets with k vertices; unimodal (weakly increasing, then weakly decreasing)", lean: "Erdos993.indepSeq, Erdos993.UnimodalSeq", module: "Challenge", status: "definitions, identical in Challenge and Solution", note: "Bodies identical to formal-conjectures pull request #4192 at commit 99e1ae34."}
+
+acknowledgements: "Thomas Dias operated one of the Codex workspaces (the low-mean part)."

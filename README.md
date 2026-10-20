@@ -1,11 +1,20 @@
 # Unimodality of the independence sequence of a finite forest (Erdős Problem 993), in Lean 4
 
-A Lean 4 and Mathlib formalization of one theorem: for every finite forest, the numbers of independent sets with
-0, 1, 2, ... vertices weakly increase up to some index and weakly decrease after it. This is the statement listed as
-Erdős Problem 993; later sources attribute the question to a 1987 paper of Alavi, Malde, Schwenk and Erdős
-(section 2). The first claimed proof for all finite forests is by T. Zhang and W. Li (self-archived preprints
-of 26 and 27 September 2026). This repository formalizes a second proof, from a manuscript of W. Li, K. Vallier
-and T. Zhang. No priority is claimed, and this is not the first formalization of the theorem (section 8).
+For every finite forest, the number of independent sets of each size first weakly increases and then weakly
+decreases: the sequence is unimodal. Alavi, Malde, Schwenk and Erdős asked this in 1987; it is Erdős Problem 993.
+
+Tong Zhang and Wei Li (Northwestern Polytechnical University) found the key idea and gave the first proof
+(27 September 2026; doi:10.5281/zenodo.22999166). W. Li, K. Vallier and T. Zhang, "Unimodality of Forest
+Independence Polynomials", gives a second proof (version 2.15, doi:10.5281/zenodo.23269638; arXiv:2610.07943 is an
+earlier version). This repository formalizes that second proof in Lean 4 and Mathlib.
+
+The proof makes about 13,700 checks in the Lean kernel with `decide +kernel`, uses no `native_decide`, and depends
+only on the three standard axioms. It is registered with Palomar as PALOMAR-2026-10-11-000012 and was accepted by
+both of Palomar's kernel checkers (nanoda and con-ron). AI systems produced and reviewed all of the Lean; no human
+has read it.
+
+None of the manuscripts cited here has been refereed, and erdosproblems.com lists the problem as claimed, not
+accepted. No priority and no first formalization is claimed (section 8).
 
 ## 1. The statement
 For a finite graph `G` let `i_k(G)` be the number of independent sets of `G` with exactly `k` vertices (sets of
@@ -23,8 +32,8 @@ every finite tree, which is the special case of connected forests. In `Challenge
 module text of `Challenge.lean` explains every Lean idiom (`[Fintype V]`, `IsAcyclic`, `IsTree`, `Nat.card`, `Type`).
 
 ## 2. Comparison with the question as posed
-- **The 1987 paper** (Alavi, Malde, Schwenk and Erdős, Congressus Numerantium 58 (1987), 15-23). Nobody on our side
-  has read it. As reported by later sources: arXiv:2610.07943v1 prints its Problem 3 as "For trees (or perhaps
+- **The 1987 paper** (Alavi, Malde, Schwenk and Erdős, Congressus Numerantium 58 (1987), 15-23). As reported by
+  later sources: arXiv:2610.07943v1 prints its Problem 3 as "For trees (or perhaps
   forests), is the vertex independence sequence unimodal?"; the abstract of Levit and Mandrescu, arXiv:math/0211036,
   reports the same form; the formal-conjectures file locates it on page 21; the zbMATH review (Zbl 0679.05061)
   describes a sequence indexed from 1 to the independence number.
@@ -57,7 +66,7 @@ were not read; what we take from another paper's report is marked. Every item ha
 - **Partial results.** Claw-free graphs (Hamidoune 1990; Chudnovsky and Seymour 2007; as reported in
   arXiv:2610.07943v1); recursively built trees (Galvin and Hilyard, arXiv:1701.02204); spiders (Li, Li, Yang and
   Zhang, Selecta Math. 32 (2026), article 87); random trees (Basit and Galvin, Electron. J. Combin. 28(3), P3.23).
-- **Stronger statements fail.** Log-concavity fails for trees from 26 vertices on (Kadrawi, Levit, Yosef and
+- **Stronger statements fail.** Log-concavity fails for some trees (Kadrawi, Levit, Yosef and
   Mizrachi 2023, as reported by Ramos and Sun, arXiv:2510.18826; Kadrawi and Levit, Ars Math. Contemp. 25(4) (2025),
   P4.03; Galvin, arXiv:2502.10654). Bipartite graphs need not be unimodal (Bhattacharyya and Kahn, arXiv:1301.1752).
 - **Large forests.** Fang, Lu, Nevo, Yao and Zheng (arXiv:2609.20961v1, 17 September 2026) report a proof for all
@@ -71,8 +80,8 @@ were not read; what we take from another paper's report is marked. Every item ha
   version is arXiv:2610.07943v1 (6 October 2026), which the Lean adapts. The text the Lean follows is version 2.15,
   deposited on Zenodo with restricted access (doi:10.5281/zenodo.23269638) and under revision by its
   authors. It keeps the decomposition, binomial mixture and rank window of the first proof. Not peer reviewed.
-- **Trackers on 9 October 2026.** The problem page shows no status word and lists two proof claims (Fang et al.;
-  T. Zhang) under a notice that listing is no guarantee of correctness. formal-conjectures marks the problem open.
+- **Trackers.** In October 2026 erdosproblems.com lists the problem as claimed, not accepted. On 9 October 2026
+  formal-conjectures marked it open.
 
 ## 4. What is and is not claimed
 Claimed: `Solution.lean` proves the two statements of `Challenge.lean` with no `sorry`, from the axioms `propext`,
@@ -85,7 +94,7 @@ the Lean follows is version 2.15, deposited with restricted access and under rev
 Our search of 9 October 2026 (the web, GitHub, arXiv, the problem page) found no Coq or Isabelle formalization.
 Readers: combinatorialists working on independence polynomials; formalizers. Limits:
 1. Heavy reliance on computation: about 13,700 kernel evaluations; at least 85% of the source is certificate data.
-2. Two parts, at most 24 vertices and at least 25, by different arguments; one unified argument would be preferable.
+2. Two parts, small forests and larger ones, by different arguments; one unified argument would be preferable.
 3. Trusted: the Lean kernel, the three axioms, `Challenge.lean`, and Mathlib's definitions at the pinned revision.
    Six small custom elaborators and macros run during elaboration; the kernel checks their output.
 4. No human has read the Lean proofs, and no human has yet read the manuscript's proofs in full (section 7).
@@ -99,7 +108,7 @@ Readers: combinatorialists working on independence polynomials; formalizers. Lim
 
 ## 5. Correspondence with the manuscript
 The public text is arXiv:2610.07943v1: the Lean proves its main theorem and keeps its reduction (window of ranks,
-decomposition, choice of activity, moment criterion, split at 24 and 25 vertices). The text the Lean follows is
+decomposition, choice of activity, moment criterion, split between small and larger forests). The text the Lean follows is
 version 2.15 (restricted access; the Lean was written against version 2.13, and versions 2.14 and 2.15 record the
 corrections found during formalization). The second column gives the statement of arXiv v1 where it is the same.
 "V213" is the directory `Erdos993Lean/Analytic/V213/` (`V/` below).
@@ -125,7 +134,7 @@ Proved in the Lean by later arguments that arXiv v1 does not contain, with what 
   and `E M` lies between `4/q` and the starting mean of the subinterval, then there is no valley at `k`;
 - large means: the same conclusion when `E M` is at least the starting mean, by lower bounds for a weighted valley kernel and 55 averaging
   inequalities, each with margin greater than 1/500;
-- at most 24 vertices: no valley at any rank of the window, over 203 triples of order, independence number and rank.
+- small forests: no valley at any rank of the window, over 203 triples of order, independence number and rank.
 
 The abstract and Sections 7 and 8 of arXiv v1 describe interval-arithmetic coverings, compiled evaluations and an
 earlier Lean development; none of these is how this repository works. AI systems made this comparison, on
@@ -154,7 +163,7 @@ lines; 203 MiB, at least 85% of it data. The figures below count such lines unle
   `V/` (2,321); `Erdos993Lean/F4U/Light/` (252 integer polynomials with 3,156 sign checks, and the equality of each
   stored polynomial with its symbolic definition; 4,464 evaluations).
 - Elsewhere: 136 checked lists of rational comparisons; 187 evaluations for the Laplace bound; 202 for high means;
-  about 100 for at most 24 vertices (over parameter triples; no forest is enumerated). No solver, floating-point
+  about 100 for small forests (over parameter triples; no forest is enumerated). No solver, floating-point
   result, compiled evaluation or data file is trusted. Of the generators only `tools/reflect_linking/` is included.
 
 ## 7. How it was produced and who checked what
@@ -186,18 +195,19 @@ Identifiers and commits are in `formalization.yaml`. None of these repositories 
 line gives what the repository or its paper reports. The last four concern all finite forests.
 - 11 September 2026, zouzh14/erdos-993-eventual (Z. Zou), and 15 to 21 September,
   junwei-lu/Erdos_993_Tree_Independent_Set_Unimodality (Theorem 1.1 of Fang et al.): large forests only.
-- 29 September 2026, RichP0123/erdos993-floor38: every forest with at most 37 vertices, on the three standard
-  axioms; its README says it does not settle the problem.
-- 29 September 2026, selfreferencing/erdos993-lean (this project, version 1.0). As its README describes it: at
-  most 60 vertices by T. Zhang's certificates, at least 61 by a different argument developed in this project and
-  not independently reviewed; 271 `native_decide`, hence five axioms (the standard three and two compiler axioms).
+- 29 September 2026, RichP0123/erdos993-floor38: forests up to a fixed size, on the three standard axioms;
+  its README does not claim the general case.
+- 29 September 2026, selfreferencing/erdos993-lean (this project, version 1.0, superseded by this
+  repository): small forests by T. Zhang's certificates, larger forests by a different argument written by AI
+  systems in this project and not independently reviewed; 271 `native_decide`, hence five axioms (the standard
+  three and two compiler axioms).
 - 2 October 2026, lixiang90/forest-unimodality: an independent formalization, by another person, of T. Zhang's
   manuscript of 26 September (proof commit of 29 September). Its README reports a clean rebuild on 2 October and
   the three standard axioms only; its one-line description still says verification is pending.
 - 6 October 2026, selfreferencing/erdos993-forest-unimodality-lean (this project): accompanies arXiv:2610.07943v1;
   still with native evaluation (411 compiled evaluations and five axioms, as that paper reports).
 - This repository: the second proof; every finite computation evaluated by the kernel; the three standard axioms
-  only; the complete export accepted by three independent kernel checkers (section 10 says on which tree).
+  only; accepted by both of Palomar's kernel checkers (nanoda and con-ron); section 10 reports our own runs.
 
 ## 9. Repository layout
 `Challenge.lean` (the statement); `Solution.lean` (the same declarations with proofs); `comparator.json`;

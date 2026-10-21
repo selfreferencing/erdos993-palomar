@@ -13,8 +13,7 @@ only on the three standard axioms. It is registered with Palomar as PALOMAR-2026
 both of Palomar's kernel checkers (nanoda and con-ron). AI systems produced and reviewed all of the Lean; no human
 has read it.
 
-None of the manuscripts cited here has been refereed, and erdosproblems.com lists the problem as claimed, not
-accepted. No priority and no first formalization is claimed (section 8).
+None of the manuscripts cited here has been refereed. No priority and no first formalization is claimed (section 8).
 
 ## 1. The statement
 For a finite graph `G` let `i_k(G)` be the number of independent sets of `G` with exactly `k` vertices (sets of
@@ -80,8 +79,7 @@ were not read; what we take from another paper's report is marked. Every item ha
   version is arXiv:2610.07943v1 (6 October 2026), which the Lean adapts. The text the Lean follows is version 2.15,
   deposited on Zenodo with restricted access (doi:10.5281/zenodo.23269638) and under revision by its
   authors. It keeps the decomposition, binomial mixture and rank window of the first proof. Not peer reviewed.
-- **Trackers.** In October 2026 erdosproblems.com lists the problem as claimed, not accepted. On 9 October 2026
-  formal-conjectures marked it open.
+- **Trackers.** On 9 October 2026 formal-conjectures marked it open.
 
 ## 4. What is and is not claimed
 Claimed: `Solution.lean` proves the two statements of `Challenge.lean` with no `sorry`, from the axioms `propext`,
